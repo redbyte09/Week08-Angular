@@ -10,5 +10,8 @@
   <input 
     type="text" 
     [(ngModel)]="userName" 
+    (input)="validateName()" 
     placeholder="Enter your name"
   >
+
+  <p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
